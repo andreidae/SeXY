@@ -50,6 +50,7 @@ BBmap (https://jgi.doe.gov/data-and-tools/bbtools/)
 
 `reformat.sh in=file.fasta out=file_10kb.fasta minlength=10000`
 
+### Create bed files of X-scaffolds and autosomal scaffolds
 - Extract regions mapping to X and Y from the satsuma output independently
 
 `grep chromosome_Y satsuma_summary.chained.out | awk '{print $4"\t"$5"\t"$6}' > Y.bed`
@@ -59,6 +60,11 @@ BBmap (https://jgi.doe.gov/data-and-tools/bbtools/)
 - Remove regions that overlapping regions from the X bed file (putatively pseudoautosomal regions)
 
 `grep -v -f <(bedtools intersect -a X.bed -b Y.bed) X.bed > X_trim.bed`
+
+- Extract scaffolds not mapping to X and Y from the satsuma output independently
+`samtools faidx reference.fasta`
+`grep -v -f <(cat Y.bed X.bed | cut -f 1 | sort | uniq) reference.fasta.fai | awk '{print $1"\t1\t"$2}'  > Autosomes.bed`
+
 
 ### Calculate depths of bam files
 
