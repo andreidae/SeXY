@@ -5,7 +5,7 @@ It uses a synteny-based approach to identify putative X-linked scaffolds in a gi
 
 The seXY method requires: 
 1. Raw sequencing reads of the target individual, 
-2. an assembled genome of the target species/or closely related species hereafter referred to as the ‘reference genome assembly’, and 
+2. An assembled genome of the target species/or closely related species hereafter referred to as the ‘reference genome assembly’, and 
 3. assembled X and Y chromosomes from a related chromosome-level assembly hereafter referred to as the ‘reference sex-chromosome assembly’.
 
 
@@ -17,11 +17,17 @@ A. Use the reference sex-chromosome assemblies (X and Y) to identify putative se
 B. Extract scaffolds aligning to the X reference sex chromosome assembly and remove pseudoautosomal regions, i.e. short homology regions between the X and Y chromosome. 
 
 C. Extract autosomal scaffolds, i.e. scaffolds not aligning to either the X or Y reference sex-chromosome assembly. 
+
 D. Map raw shotgun reads to the reference genome assembly.
+
 E. Calculate the mean coverage of ten million sites randomly sampled across the extracted X-linked scaffolds. 
+
 F. Calculate the mean coverage of ten million sites randomly sampled across the extracted autosomal scaffold.
+
 G. Calculate the ratio of X-linked scaffold mean coverage to Autosomal scaffold mean coverage (X:A).
+
 H. Repeat coverage calculations (E-G) ten times. 
+
 I. Calculate the mean and standard deviations of the X:A.
 
 
@@ -37,9 +43,8 @@ BBmap (https://jgi.doe.gov/data-and-tools/bbtools/)
 
 A. 
 `SatsumaSynteny -m 1 -n 10 -q [Your_genome.fasta] -t [X_and_Y_chromosomes.fasta] -o [Output directory name]`
-To reduce memory and time requirements you can remove all scaffolds <10kb from the reference genomes 
 
-This can be done easily with bbtools for example
+ - To reduce memory and time requirements you can remove all scaffolds <10kb from the reference genomes.This can be done easily with bbtools for example
 `reformat.sh in=file.fasta out=file_10kb.fasta minlength=10000`
 
 Extract regions mapping to X and Y from the satsuma output independently
