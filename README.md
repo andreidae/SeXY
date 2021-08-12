@@ -5,8 +5,8 @@ It uses a synteny-based approach to identify putative X-linked scaffolds in a gi
 
 ## The seXY method requires: 
 1. Raw sequencing reads of the target individual, 
-2. An assembled genome of the target species/or closely related species ‘reference genome assembly’. 
-3. Assembled X and Y chromosomes from a related chromosome-level assembly ‘reference sex-chromosome assembly’.
+2. An assembled genome of the target species/or closely related species or `reference genome assembly`. 
+3. Assembled X and Y chromosomes from a related chromosome-level assembly or `reference sex-chromosome assembly`.
 
 
 ## In general, the steps of seXY are:
