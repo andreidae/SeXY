@@ -70,15 +70,11 @@ BBmap (https://jgi.doe.gov/data-and-tools/bbtools/)
 
 ### Calculate depths of bam files
 
-`sh Coverage_calculation.sh `
-```
-## $1 Autosomes.bed
-## $2 Satsumaname
-## $3 X_trim.bed
-## $4 Output_folder
-## $5 Bamfile
-## $6 Output_prefix
-```
+-  Randomly sample 1M sites 10x and calculate depth from said sites
+
+`sh Coverage_calculation.sh Autosomes.bed X_trim.bed Output_directory Bamfile Output_prefix`
+
+This will result in a txt file called `Output_directory/Outputprefix_ratios.txt` where the 10 X:A ratios can be found
 
 
 
