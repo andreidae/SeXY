@@ -22,3 +22,28 @@ G. Calculate the ratio of X-linked scaffold mean coverage to Autosomal scaffold 
 H. Repeat coverage calculations (E-G) ten times. 
 I. Calculate the mean and standard deviations of the X:A.
 
+
+Pipeline steps
+
+Required software
+Satsuma synteny (http://satsuma.sourceforge.net/)
+BEDtools (https://bedtools.readthedocs.io/en/latest/)
+SAMtools (http://samtools.sourceforge.net/)
+
+Additional software
+BBmap (https://jgi.doe.gov/data-and-tools/bbtools/)
+
+A. SatsumaSynteny -m 1 -n 10 -q [Your_genome.fasta] -t [X_and_Y_chromosomes.fasta] -o [Output directory name]
+To reduce memory and time requirements you can remove all scaffolds <10kb from the reference genomes 
+
+This can be done easily with bbtools
+reformat.sh in=file.fasta out=file_10kb.fasta minlength=10000
+
+Extract regions mapping to X and Y from the satsuma output independently
+
+grep chromosome_Y satsuma_summary.chained.out | awk '{print $4"\t"$5"\t"$6}' > Y.bed
+grep chromosome_X satsuma_summary.chained.out | awk '{print $4"\t"$5"\t"$6}' > X.bed
+Remove regions that overlap between the 2 from the X bed
+grep -v -f <(bedtools intersect -a X.bed -b Y.bed) X.bed > X_trim.bed
+
+
