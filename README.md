@@ -62,13 +62,15 @@ BBmap (https://jgi.doe.gov/data-and-tools/bbtools/)
 `grep -v -f <(bedtools intersect -a X.bed -b Y.bed) X.bed > X_trim.bed`
 
 - Extract scaffolds not mapping to X and Y from the satsuma output independently
+ 
 `samtools faidx reference.fasta`
+
 `grep -v -f <(cat Y.bed X.bed | cut -f 1 | sort | uniq) reference.fasta.fai | awk '{print $1"\t1\t"$2}'  > Autosomes.bed`
 
 
 ### Calculate depths of bam files
 
-`sh Coverage_calculation.sh`
+`sh Coverage_calculation.sh `
 ```
 ## $1 Autosomes.bed
 ## $2 Satsumaname
