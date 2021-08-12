@@ -13,7 +13,9 @@ The seXY method requires:
 In general, the steps of seXY are:
 
 A. Use the reference sex-chromosome assemblies (X and Y) to identify putative sex-linked scaffolds in the reference genome assembly via synteny.
+
 B. Extract scaffolds aligning to the X reference sex chromosome assembly and remove pseudoautosomal regions, i.e. short homology regions between the X and Y chromosome. 
+
 C. Extract autosomal scaffolds, i.e. scaffolds not aligning to either the X or Y reference sex-chromosome assembly. 
 D. Map raw shotgun reads to the reference genome assembly.
 E. Calculate the mean coverage of ten million sites randomly sampled across the extracted X-linked scaffolds. 
