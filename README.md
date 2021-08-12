@@ -4,9 +4,9 @@ SeXY is a simple sex-identification method for taxa lacking assembled conspecifi
 It uses a synteny-based approach to identify putative X-linked scaffolds in a given reference assembly, and take advantage of the expectation that males have half the amount of X-chromosome genetic material compared to females.
 
 The seXY method requires: 
-(1) Raw sequencing reads of the target individual, 
-(2) an assembled genome of the target species/or closely related species hereafter referred to as the ‘reference genome assembly’, and 
-(3) assembled X and Y chromosomes from a related chromosome-level assembly hereafter referred to as the ‘reference sex-chromosome assembly’. The general outline of the seXY method is presented visually in Figure1. In general, the steps of seXY are: 
+1. Raw sequencing reads of the target individual, 
+2. an assembled genome of the target species/or closely related species hereafter referred to as the ‘reference genome assembly’, and 
+3. assembled X and Y chromosomes from a related chromosome-level assembly hereafter referred to as the ‘reference sex-chromosome assembly’. The general outline of the seXY method is presented visually in Figure1. In general, the steps of seXY are: 
 
 
 In general, the steps of seXY are:
