@@ -44,8 +44,16 @@ SAMtools (http://samtools.sourceforge.net/)
 BBmap (https://jgi.doe.gov/data-and-tools/bbtools/)
 
 ### Run satsuma synteny to find which scaffolds align with sex chromosomes 
-`SatsumaSynteny -m 1 -n 10 -q [Your_genome.fasta] -t [X_and_Y_chromosomes.fasta] -o [Output directory name]`
+`sh SatsumaSynteny.sh $1 $2 $3 $4 $5`
 
+```
+Replace each number with the following variables
+$1 - Threads
+$2 - Query sequence (reference genome assembly)
+$3 - Target sequence (reference sex-chromosome assembly)
+$4 - Output_directory
+$5 - Satsuma directory
+```
  - To reduce memory and time requirements you can remove all scaffolds <10kb from the reference genomes prior to alignment. This can be done easily with bbtools for example
 
 `reformat.sh in=file.fasta out=file_10kb.fasta minlength=10000`
