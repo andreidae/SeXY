@@ -23,11 +23,11 @@ E. Calculate the mean coverage of ten million sites randomly sampled across the 
 
 F. Calculate the mean coverage of ten million sites randomly sampled across the extracted autosomal scaffold.
 
-G. Calculate the ratio of X-linked scaffold mean coverage to Autosomal scaffold mean coverage (X:A).
+G. Calculate the ratio of X-linked scaffold mean coverage to Autosomal scaffold mean coverage (X:A ratio).
 
 H. Repeat coverage calculations (E-G) ten times. 
 
-I. Calculate the mean and standard deviations of the X:A.
+I. Calculate the mean and standard deviations of the X:A ratio.
 
 
 ## Pipeline steps
