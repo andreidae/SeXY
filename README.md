@@ -9,7 +9,7 @@ It uses a synteny-based approach to identify putative X-linked scaffolds in a gi
 3. Assembled X and Y chromosomes from a related chromosome-level assembly or `reference sex-chromosome assembly`.
 
 
-## In general, the steps of seXY are:
+## In general, the steps of SeXY are:
 
 A. Use the reference sex-chromosome assemblies (X and Y) to identify putative sex-linked scaffolds in the reference genome assembly via synteny.
 
