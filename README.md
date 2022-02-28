@@ -54,7 +54,7 @@ $3 - Target sequence (reference sex-chromosome assembly)
 $4 - Output_directory
 $5 - Satsuma directory
 ```
- - To reduce memory and time requirements you can remove all scaffolds <10kb from the reference genomes prior to alignment. This can be done easily with bbtools for example
+ - To reduce memory and time requirements you can remove all scaffolds <10kb from the reference genomes prior to alignment. This can be done easily be done using reformat.sh from the BBmap toolsuite (Bushnell, 2014), for example:
 
 `reformat.sh in=file.fasta out=file_10kb.fasta minlength=10000`
 
