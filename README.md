@@ -45,6 +45,17 @@ SAMtools (http://samtools.sourceforge.net/)
 ### Additional software
 BBmap (https://jgi.doe.gov/data-and-tools/bbtools/)
 
+
+###Download the reference genome assembly
+See frequently asked questions
+
+### Map your reads to the reference genome assembly
+See frequently asked questions
+
+###Download the reference sex-chromosome assembly
+See frequently asked questions
+
+
 ### Run satsuma synteny to find which scaffolds align with sex chromosomes 
 `sh SatsumaSynteny.sh $1 $2 $3 $4 $5`
 
