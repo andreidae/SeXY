@@ -107,7 +107,7 @@ Note: the terms chromosome_Y and chromosome_X will depend on the fasta file head
 
 
 ### D. Map raw shotgun reads to the reference genome assembly
-Map your raw shotgun reads to RefGen which includes both autosome- and sex- chromosome scaffolds. If you remove the short scaffolds <10 kb, use  RefGen_10kb.fasta. See frequently asked questions
+Map your raw shotgun reads to RefGen. The RefGen includes both autosome- and sex- chromosome scaffolds. If you remove the short scaffolds <10 kb, use RefGen_10kb.fasta. The output from the mapping is a bam file. See frequently asked questions.
 
 
 ### E.I. Calculate depths of bam files
@@ -183,7 +183,7 @@ You can download a genome from a genome assembly depository such as NCBI or DNAz
 `wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/288/925/GCF_002288925.2_ASM228892v3/GCF_002288925.2_ASM228892v3_genomic.fna.gz`
 
 
-2. How to obtain a reference sex-chromosome assembly
+2. How to obtain a reference sex-chromosome assembly?
 
 This can either be done by downloading the sex chromosomes directly or by downloading a chromosome level assembly and extracting the sex chromosomes.
 To download the sex chromosomes directly, follow the same steps as to with the reference genome. In “FTP directory for RefSeq assembly” there is usually a folder called assembly_structure in which the individual chromosomes can be downloaded in fasta format. E.g. Xchr from the cow:
