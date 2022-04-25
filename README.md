@@ -1,7 +1,9 @@
 # SeXY
 
-SeXY is a simple sex-identification method for taxa lacking assembled conspecific sex chromosomes, applicaple to shotgun data from any species with a heterogametic and a homogametric sex. 
+SeXY is a simple sex-identification method for taxa lacking assembled conspecific sex chromosomes, applicaple to shotgun data from mammal species with a heterogametic and a homogametic sex and potentially to other species in which the target and reference species share the same sex determination system.
+
 It uses a synteny-based approach to identify putative X-linked scaffolds in a given reference assembly, and take advantage of the expectation that males have half the amount of X-chromosome genetic material compared to females.
+
 
 ## The seXY method requires: 
 1. Raw sequencing reads of the target individual, 
