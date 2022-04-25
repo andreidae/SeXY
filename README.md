@@ -188,7 +188,9 @@ E.g. Beluga.v3 assembly reference genome:
 2. How to obtain a reference sex-chromosome assembly?
 
 This can either be done by downloading the sex chromosomes directly or by downloading a chromosome level assembly and extracting the sex chromosomes.
-To download the sex chromosomes directly, follow the same steps as to with the reference genome. In “FTP directory for RefSeq assembly” there is usually a folder called assembly_structure in which the individual chromosomes can be downloaded in fasta format. E.g. Xchr from the cow:
+To download the sex chromosomes directly, follow the same steps as to with the reference genome. In “FTP directory for RefSeq assembly” there is usually a folder called assembly_structure in which the individual chromosomes can be downloaded in fasta format `wget [gnz.gz sex-chromosome link]`. 
+
+E.g. Xchr from the cow:
 `wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/263/795/GCF_002263795.1_ARS-UCD1.2/GCF_002263795.1_ARS-UCD1.2_assembly_structure/Primary_Assembly/assembled_chromosomes/FASTA/chrX.fna.gz`
 
 To extract the sex chromosomes one first needs to find the fasta header for the chromosomes, once that is available samtools faidx can be used. E.g. 
