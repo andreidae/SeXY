@@ -149,8 +149,6 @@ in bbMAP_PB_DOG.sh
 src=$WDIR/ref_DOG_10kb
 ref=DOG
 
-```
-
 for i in 100000 50000 10000 5000 2500 1000; do for j in 1 2 3 4 5;
 
 do
@@ -162,6 +160,8 @@ reformat.sh \
 	sampleseed=1${j}0
 
   done; done
+
+```
 
 The number of reads in the bam file can be checked with:
 
