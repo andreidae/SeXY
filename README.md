@@ -172,6 +172,8 @@ The number of reads in the bam file can be checked with:
 ## Frequently asked questions
 
 1. How to download the reference genome assembly?
+
+
 You can download a genome from a genome assembly depository such as NCBI or DNAzoo. The steps for NCBI are:
 - Go to NCBI: https://www.ncbi.nlm.nih.gov/
 - In the search option select: “Assembly” and write the species name.
@@ -198,9 +200,11 @@ To extract the sex chromosomes from RefGen one first needs to find the fasta hea
 
 
 3. How to map raw reads to the reference genome assembly?
+
 You can use developed pipeline such as PALEOMIX (https://paleomix.readthedocs.io/en/stable/). This pipeline is designed to process High Throughput Sequencing data. Was originally designed with ancient DNA data but can also be used for processing modern samples. 
 
 4. How do I know that the mitochondrial genome is not included in the reference genome assembly?
+
 Most reference genome assemblies exclude the mitochondrial genome. You should be able to see that information in the description of the assembly in e.g. NCBI. 
 If it is uncertain whether the mitochondrial is included or not, you can map your reference genome to the mitochondrial genome and remove those reads, or you can exclude all scaffolds <18 kb. E.g.
 `reformat.sh in=RefGen.fasta out=RefGen_18kb.fasta minlength=18000`
