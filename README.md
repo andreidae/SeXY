@@ -77,9 +77,9 @@ $5 - Satsuma directory
 ```
  - To reduce memory and time requirements you can remove all scaffolds <10kb from the reference genomes prior to alignment. This can be done easily using reformat.sh from the BBmap toolsuite (Bushnell, 2014), for example:
 
-`reformat.sh in=file.fasta out=file_10kb.fasta minlength=10000`
+`reformat.sh in=RefGen.fasta out=RefGen_10kb.fasta minlength=10000`
 
-where file.fasta is your original RefGen and file_10kb.fasta is your RefGen after removing scaffolds <10 kb
+where RefGen.fasta is your original RefGen and RefGen_10kb.fasta is your RefGen after removing scaffolds <10 kb
 
 - To run reformat.sh you can copy the file to your working directory from BBmap toolsuit GitHub
 https://github.com/BioInfoTools/BBMap/blob/master/sh/reformat.sh
@@ -101,13 +101,13 @@ Note: the terms chromosome_Y and chromosome_X will depend on the fasta file head
 
 - Extract scaffolds not mapping to X and Y from the satsuma output independently
  
-`samtools faidx reference.fasta`
+`samtools faidx RefGEN_10kb.fasta`
 
-`grep -v -f <(cat Y.bed X.bed | cut -f 1 | sort | uniq) reference.fasta.fai | awk '{print $1"\t1\t"$2}'  > Autosomes.bed`
+`grep -v -f <(cat Y.bed X.bed | cut -f 1 | sort | uniq) RefGEN_10kb.fai | awk '{print $1"\t1\t"$2}'  > Autosomes.bed`
 
 
 ### D. Map raw shotgun reads to the reference genome assembly
-See frequently asked questions
+Map your raw shotgun reads to RefGen which includes both autosome- and sex- chromosome scaffolds. If you remove the short scaffolds <10 kb, use the RefGen_10kb.fasta. See frequently asked questions
 
 
 ### E.I. Calculate depths of bam files
