@@ -121,17 +121,17 @@ This will result in a txt file called `Output_directory/Outputprefix_ratios.txt`
 
 ### Frequently asked questions
 
-How to download the reference genome assembly?
+1. How to download the reference genome assembly?
 You can download a genome from a genome assembly depository such as NCBI or DNAzoo. Example
-> Go to NCBI: https://www.ncbi.nlm.nih.gov/
-> In the search option select: “Assembly” and write the species name [e.g. Beluga]
-> Select the assembly species and version of interest
-> On the right panel, “Access the data”, click on “FTP directory for RefSeq assembly”
-> Copy the link address of the genome in .fna.gz format 
-> You can use this address to download the genome using command line [e.g. Beluga v3 assembly reference genome: wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/288/925/GCF_002288925.2_ASM228892v3/GCF_002288925.2_ASM228892v3_genomic.fna.gz]
+- Go to NCBI: https://www.ncbi.nlm.nih.gov/
+- In the search option select: “Assembly” and write the species name [e.g. Beluga]
+- Select the assembly species and version of interest
+- On the right panel, “Access the data”, click on “FTP directory for RefSeq assembly”
+- Copy the link address of the genome in .fna.gz format 
+- You can use this address to download the genome using command line [e.g. Beluga v3 assembly reference genome: wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/288/925/GCF_002288925.2_ASM228892v3/GCF_002288925.2_ASM228892v3_genomic.fna.gz]
 
 
-How to obtain a reference sex-chromosome assembly
+3. How to obtain a reference sex-chromosome assembly
 
 This can either be done by downloading the sex chromosomes directly or by downloading a chromosome level assembly and extracting the sex chromosomes.
 To download the sex chromosomes directly, follow the same steps as to with the reference genome. In “FTP directory for RefSeq assembly” there is usually a folder called assembly_structure in which the individual chromosomes can be downloaded in fasta format. 
@@ -141,10 +141,10 @@ To extract the sex chromosomes one first needs to find the fasta header for the 
 [e.g. `samtools faidx reference.fasta Xheader > Xchromosome.fasta`]
 
 
-How to map raw reads to the reference genome assembly?
+3. How to map raw reads to the reference genome assembly?
 You can use developed pipeline such as PALEOMIX (https://paleomix.readthedocs.io/en/stable/). This pipeline is designed to process High Throughput Sequencing data. Was originally designed with ancient DNA data but can also be used for processing modern samples. 
 
-How do I know that the mitochondrial genome is not included in the reference genome assembly?
+4. How do I know that the mitochondrial genome is not included in the reference genome assembly?
 Most reference genome assemblies exclude the mitochondrial genome. You should be able to see that information in the description of the assembly in e.g. NCBI. 
 If it is uncertain whether the mitochondrial is included or not, you can map your reference genome to the mitochondrial genome and remove those reads, or you can exclude all scaffolds <18 kb. 
 [e.g. `reformat.sh in=file.fasta out=file_18kb.fasta minlength=18000`]
