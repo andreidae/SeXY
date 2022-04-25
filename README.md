@@ -107,7 +107,7 @@ Note: the terms chromosome_Y and chromosome_X will depend on the fasta file head
 
 
 ### D. Map raw shotgun reads to the reference genome assembly
-Map your raw shotgun reads to RefGen which includes both autosome- and sex- chromosome scaffolds. If you remove the short scaffolds <10 kb, use the RefGen_10kb.fasta. See frequently asked questions
+Map your raw shotgun reads to RefGen which includes both autosome- and sex- chromosome scaffolds. If you remove the short scaffolds <10 kb, use  RefGen_10kb.fasta. See frequently asked questions
 
 
 ### E.I. Calculate depths of bam files
