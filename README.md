@@ -143,7 +143,7 @@ We show an example for one of the species and RefGen analysed in our study
 
 ```in bbMAP_PB_DOG.sh
 src=$WDIR/ref_DOG_10kb
-ref=DOG```
+ref=DOG ```
 
 for i in 100000 50000 10000 5000 2500 1000; do for j in 1 2 3 4 5;
 
