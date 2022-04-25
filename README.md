@@ -93,7 +93,7 @@ https://github.com/BioInfoTools/BBMap/blob/master/sh/reformat.sh
 
 `grep chromosome_X satsuma_summary.chained.out | awk '{print $4"\t"$5"\t"$6}' > X.bed`
 
-Note: the terms chromosome_Y and chromosome_X will depend on the fasta file header of your reference sex-chromosome assembly.
+Note: the terms chromosome_Y and chromosome_X may vary and will depend on the fasta file header of your reference sex-chromosome assembly.
 
 - Remove regions that overlapping regions from the X bed file (putatively pseudoautosomal regions)
 
