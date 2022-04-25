@@ -129,7 +129,8 @@ We show an example for one of the species and RefGen analysed in our study
 
 `cat commands_bbmap_dog.txt` 
 
-``` in commands_bbmap_dog.txt
+``` 
+in commands_bbmap_dog.txt
 ./bbMAP_PB_DOG.sh sampleID_1
 ./bbMAP_PB_DOG.sh sampleID_2
 ./bbMAP_PB_DOG.sh sampleID_3
@@ -143,7 +144,8 @@ We show an example for one of the species and RefGen analysed in our study
 
 ```
 
-```in bbMAP_PB_DOG.sh
+```
+in bbMAP_PB_DOG.sh
 src=$WDIR/ref_DOG_10kb
 ref=DOG
 
