@@ -122,8 +122,9 @@ This will result in a txt file called `Output_directory/Outputprefix_ratios.txt`
 ##  Optional step
 ### Downsampling the bam files
 #### (Step between D. “Map raw reads to the RefGen” and E. “Calculate depths of bam files”)
-This is an optional step. It was use for testing how the number of reads in a bam file can influence sex identification. 
-It requires BBmap toolsuite (Bushnell, 2014) and samtools
+This is an optional step. It was used for testing how the number of reads in a bam file can influence sex identification. 
+
+It requires BBmap toolsuite (Bushnell, 2014) and samtools.
 We show an example for one of the species and RefGen analysed in our study
 
 `cat commands_bbmap_dog.txt` 
