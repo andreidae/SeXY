@@ -81,12 +81,12 @@ $5 - Satsuma directory
 
 where file.fasta is your original RefGen and file_10kb.fasta is your RefGen after removing scaffolds <10 kb
 
-- To run reformat.sh you can copy the file to your working folder from BBmap toolsuit GitHub
+- To run reformat.sh you can copy the file to your working directory from BBmap toolsuit GitHub
 https://github.com/BioInfoTools/BBMap/blob/master/sh/reformat.sh
 
 
 
-### B-C. Create bed files of X-scaffolds and autosomal scaffolds
+### B-C Create bed files of X-scaffolds and autosomal scaffolds
 - Extract regions mapping to X and Y from the satsuma output independently
 
 `grep chromosome_Y satsuma_summary.chained.out | awk '{print $4"\t"$5"\t"$6}' > Y.bed`
@@ -94,6 +94,8 @@ https://github.com/BioInfoTools/BBMap/blob/master/sh/reformat.sh
 `grep chromosome_X satsuma_summary.chained.out | awk '{print $4"\t"$5"\t"$6}' > X.bed`
 
 - Remove regions that overlapping regions from the X bed file (putatively pseudoautosomal regions)
+
+- Note: the terms chromosome_Y and chromosome_X will depend on the fasta file header of your reference sex-chromosome assembly.
 
 `grep -v -f <(bedtools intersect -a X.bed -b Y.bed) X.bed > X_trim.bed`
 
