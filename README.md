@@ -178,7 +178,7 @@ You can download a genome from a genome assembly depository such as NCBI or DNAz
 - Select the assembly species and version of interest.
 - On the right panel, “Access the data”, click on “FTP directory for RefSeq assembly”.
 - Copy the link address of the genome in .fna.gz format.
-- You can use this address to download the genome using the command line. E.g. Beluga.v3 assembly reference genome: 
+- You can use this address to download the genome using the command line `wget [gnz.gz genome link]`. E.g. Beluga.v3 assembly reference genome: 
 
 `wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/288/925/GCF_002288925.2_ASM228892v3/GCF_002288925.2_ASM228892v3_genomic.fna.gz`
 
