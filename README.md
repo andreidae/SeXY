@@ -62,6 +62,7 @@ See frequently asked questions
 Before running synteny, concatenate the RefX and RefY assemblies in one file using the command:
 
 `cat RefX.fasta RefY.fasta > RefX_RefY.fasta`
+
 The RefX and RefY can also be kept separate, but you then need to run two synteny analyses.
 
 
@@ -72,10 +73,11 @@ Use this command to run satsuma synteny:
 ```
 Replace each number with the following variables
 $1 - Threads
-$2 - Query sequence (reference genome assembly)
-$3 - Target sequence (reference sex-chromosome assembly)
+$2 - Query sequence (reference genome assembly, RefGen)
+$3 - Target sequence (reference sex-chromosome assembly, RefX and RefY)
 $4 - Output_directory
 $5 - Satsuma directory
+
 ```
  - To reduce memory and time requirements you can remove all scaffolds <10kb from the reference genomes prior to alignment. This can be done easily using reformat.sh from the BBmap toolsuite (Bushnell, 2014), for example:
 
