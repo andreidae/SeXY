@@ -199,4 +199,4 @@ You can use developed pipeline such as PALEOMIX (https://paleomix.readthedocs.io
 4. How do I know that the mitochondrial genome is not included in the reference genome assembly?
 Most reference genome assemblies exclude the mitochondrial genome. You should be able to see that information in the description of the assembly in e.g. NCBI. 
 If it is uncertain whether the mitochondrial is included or not, you can map your reference genome to the mitochondrial genome and remove those reads, or you can exclude all scaffolds <18 kb. E.g.
-`reformat.sh in=file.fasta out=file_18kb.fasta minlength=18000`
+`reformat.sh in=RefGen.fasta out=RefGen_18kb.fasta minlength=18000`
