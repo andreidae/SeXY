@@ -120,28 +120,29 @@ This will result in a txt file called `Output_directory/Outputprefix_ratios.txt`
 
 
 ##  Optional step
-### Downsampling the bam files (Between D. “Map raw reads to the RefGen” and E. “Calculate depths of bam files”)
+### Downsampling the bam files
+#### (Step between D. “Map raw reads to the RefGen” and E. “Calculate depths of bam files”)
 This is an optional step. It was use for testing how the number of reads in a bam file can influence sex identification. 
 It requires BBmap toolsuite (Bushnell, 2014) and samtools
 We show an example for one of the species and RefGen analysed in our study
 
 `cat commands_bbmap_dog.txt` 
 
-# in commands_bbmap_dog.txt
-./bbMAP_PB_DOG.sh PB_53
-./bbMAP_PB_DOG.sh PB_54
-./bbMAP_PB_DOG.sh PB_37
-./bbMAP_PB_DOG.sh PB_2
-./bbMAP_PB_DOG.sh PB_69
-./bbMAP_PB_DOG.sh PB_50
-./bbMAP_PB_DOG.sh PB_38
-./bbMAP_PB_DOG.sh PB_49
-./bbMAP_PB_DOG.sh PB_52
-./bbMAP_PB_DOG.sh PB_8
+``` in commands_bbmap_dog.txt
+./bbMAP_PB_DOG.sh sampleID_1
+./bbMAP_PB_DOG.sh sampleID_2
+./bbMAP_PB_DOG.sh sampleID_3
+./bbMAP_PB_DOG.sh sampleID_4
+./bbMAP_PB_DOG.sh sampleID_5
+./bbMAP_PB_DOG.sh sampleID_6
+./bbMAP_PB_DOG.sh sampleID_7
+./bbMAP_PB_DOG.sh sampleID_8
+./bbMAP_PB_DOG.sh sampleID_9
+./bbMAP_PB_DOG.sh sampleID_10 ```
 
-# in bbMAP_PB_DOG.sh
-src=/groups/hologenomics/andreaac/data/sex_identication/mapping/polarbear/ref_DOG_10kb
-ref=DOG
+```in bbMAP_PB_DOG.sh
+src=$WDIR/ref_DOG_10kb
+ref=DOG```
 
 for i in 100000 50000 10000 5000 2500 1000; do for j in 1 2 3 4 5;
 
@@ -158,7 +159,6 @@ reformat.sh \
 The number of reads in the bam file can be checked with:
 
 ` samtools view -c .bam`
-
 
 
 
