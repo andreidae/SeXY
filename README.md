@@ -93,9 +93,9 @@ https://github.com/BioInfoTools/BBMap/blob/master/sh/reformat.sh
 
 `grep chromosome_X satsuma_summary.chained.out | awk '{print $4"\t"$5"\t"$6}' > X.bed`
 
-- Remove regions that overlapping regions from the X bed file (putatively pseudoautosomal regions)
-
 Note: the terms chromosome_Y and chromosome_X will depend on the fasta file header of your reference sex-chromosome assembly.
+
+- Remove regions that overlapping regions from the X bed file (putatively pseudoautosomal regions)
 
 `grep -v -f <(bedtools intersect -a X.bed -b Y.bed) X.bed > X_trim.bed`
 
@@ -119,9 +119,50 @@ See frequently asked questions
 This will result in a txt file called `Output_directory/Outputprefix_ratios.txt` where the 10 X:A ratios can be found
 
 
+##  Optional step
+### Downsampling the bam files (Between D. “Map raw reads to the RefGen” and E. “Calculate depths of bam files”)
+This is an optional step. It was use for testing how the number of reads in a bam file can influence sex identification. 
+It requires BBmap toolsuite (Bushnell, 2014) and samtools
+We show an example for one of the species and RefGen analysed in our study
+
+`cat commands_bbmap_dog.txt` 
+
+# in commands_bbmap_dog.txt
+./bbMAP_PB_DOG.sh PB_53
+./bbMAP_PB_DOG.sh PB_54
+./bbMAP_PB_DOG.sh PB_37
+./bbMAP_PB_DOG.sh PB_2
+./bbMAP_PB_DOG.sh PB_69
+./bbMAP_PB_DOG.sh PB_50
+./bbMAP_PB_DOG.sh PB_38
+./bbMAP_PB_DOG.sh PB_49
+./bbMAP_PB_DOG.sh PB_52
+./bbMAP_PB_DOG.sh PB_8
+
+# in bbMAP_PB_DOG.sh
+src=/groups/hologenomics/andreaac/data/sex_identication/mapping/polarbear/ref_DOG_10kb
+ref=DOG
+
+for i in 100000 50000 10000 5000 2500 1000; do for j in 1 2 3 4 5;
+
+do
+
+reformat.sh \
+	in=${src}/${1}.${ref}_10kb.bam \
+	out=${1}.${ref}_10kb_${i}_${j}.bam \
+	samplereadstarget=${i} \
+	sampleseed=1${j}0
+
+  done; done
+
+The number of reads in the bam file can be checked with:
+
+` samtools view -c .bam`
 
 
-### Frequently asked questions
+
+
+## Frequently asked questions
 
 1. How to download the reference genome assembly?
 You can download a genome from a genome assembly depository such as NCBI or DNAzoo. Example
