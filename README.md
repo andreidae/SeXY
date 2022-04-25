@@ -46,7 +46,7 @@ SAMtools (http://samtools.sourceforge.net/)
 BBmap (https://jgi.doe.gov/data-and-tools/bbtools/)
 
 
-###Download the reference genome assembly
+### Download the reference genome assembly
 See frequently asked questions
 
 
@@ -54,7 +54,7 @@ See frequently asked questions
 See frequently asked questions
 
 
-###Download the reference sex-chromosome assembly
+### Download the reference sex-chromosome assembly
 See frequently asked questions
 
 
