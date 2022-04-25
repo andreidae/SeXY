@@ -193,7 +193,7 @@ To download the sex chromosomes directly, follow the same steps as to with the r
 E.g. Xchr from the cow:
 `wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/263/795/GCF_002263795.1_ARS-UCD1.2/GCF_002263795.1_ARS-UCD1.2_assembly_structure/Primary_Assembly/assembled_chromosomes/FASTA/chrX.fna.gz`
 
-To extract the sex chromosomes one first needs to find the fasta header for the chromosomes, once that is available samtools faidx can be used. E.g. 
+To extract the sex chromosomes from RefGen one first needs to find the fasta header for the chromosomes, once that is available samtools faidx can be used. E.g. 
 `samtools faidx reference.fasta Xheader > Xchromosome.fasta`
 
 
