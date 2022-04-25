@@ -127,9 +127,11 @@ You can download a genome from a genome assembly depository such as NCBI or DNAz
 How to obtain a reference sex-chromosome assembly
 
 This can either be done by downloading the sex chromosomes directly or by downloading a chromosome level assembly and extracting the sex chromosomes.
-To download the sex chromosomes directly, follow the same steps as to with the reference genome. In “FTP directory for RefSeq assembly” there is usually a folder called *assembly_structure in which the individual chromosomes can be downloaded in fasta format. [e.g. Xchr from the cow: wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/263/795/GCF_002263795.1_ARS-UCD1.2/GCF_002263795.1_ARS-UCD1.2_assembly_structure/Primary_Assembly/assembled_chromosomes/FASTA/chrX.fna.gz]
+To download the sex chromosomes directly, follow the same steps as to with the reference genome. In “FTP directory for RefSeq assembly” there is usually a folder called assembly_structure in which the individual chromosomes can be downloaded in fasta format. 
+[e.g. Xchr from the cow: `wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/263/795/GCF_002263795.1_ARS-UCD1.2/GCF_002263795.1_ARS-UCD1.2_assembly_structure/Primary_Assembly/assembled_chromosomes/FASTA/chrX.fna.gz`]
 
-To extract the sex chromosomes one first needs to find the fasta header for the chromosomes, once that is available samtools faidx can be used [e.g. samtools faidx reference.fasta Xheader > Xchromosome.fasta]
+To extract the sex chromosomes one first needs to find the fasta header for the chromosomes, once that is available samtools faidx can be used 
+[e.g. `samtools faidx reference.fasta Xheader > Xchromosome.fasta`]
 
 
 How to map raw reads to the reference genome assembly?
@@ -137,4 +139,5 @@ You can use developed pipeline such as PALEOMIX (https://paleomix.readthedocs.io
 
 How do I know that the mitochondrial genome is not included in the reference genome assembly?
 Most reference genome assemblies exclude the mitochondrial genome. You should be able to see that information in the description of the assembly in e.g. NCBI. 
-If it is uncertain whether the mitochondrial is included or not, you can map your reference genome to the mitochondrial genome and remove those reads, or you can exclude all scaffolds <18 kb. [e.g. `reformat.sh in=file.fasta out=file_18kb.fasta minlength=18000`]
+If it is uncertain whether the mitochondrial is included or not, you can map your reference genome to the mitochondrial genome and remove those reads, or you can exclude all scaffolds <18 kb. 
+[e.g. `reformat.sh in=file.fasta out=file_18kb.fasta minlength=18000`]
