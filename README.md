@@ -49,14 +49,23 @@ BBmap (https://jgi.doe.gov/data-and-tools/bbtools/)
 ###Download the reference genome assembly
 See frequently asked questions
 
+
 ### Map your reads to the reference genome assembly
 See frequently asked questions
+
 
 ###Download the reference sex-chromosome assembly
 See frequently asked questions
 
 
-### Run satsuma synteny to find which scaffolds align with sex chromosomes 
+### Run satsuma synteny to find which scaffolds align with sex chromosomes.
+Before running synteny, concatenate the RefX and RefY assemblies in one file using the command:
+`cat RefX.fasta RefY.fasta > RefX_RefY.fasta`
+The RefX and RefY can also be kept separate, but you then need to run two synteny analyses.
+
+
+Use this command to run satsuma synteny:  
+
 `sh SatsumaSynteny.sh $1 $2 $3 $4 $5`
 
 ```
