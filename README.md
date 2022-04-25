@@ -60,6 +60,7 @@ See frequently asked questions
 
 ### Run satsuma synteny to find which scaffolds align with sex chromosomes.
 Before running synteny, concatenate the RefX and RefY assemblies in one file using the command:
+
 `cat RefX.fasta RefY.fasta > RefX_RefY.fasta`
 The RefX and RefY can also be kept separate, but you then need to run two synteny analyses.
 
