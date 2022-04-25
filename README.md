@@ -50,15 +50,11 @@ BBmap (https://jgi.doe.gov/data-and-tools/bbtools/)
 See frequently asked questions
 
 
-### Map your reads to the reference genome assembly
-See frequently asked questions
-
-
 ### Download the reference sex-chromosome assembly
 See frequently asked questions
 
 
-### Run satsuma synteny to find which scaffolds align with sex chromosomes.
+### A. Run satsuma synteny to find which scaffolds align with sex chromosomes.
 Before running synteny, concatenate the RefX and RefY assemblies in one file using the command:
 
 `cat RefX.fasta RefY.fasta > RefX_RefY.fasta`
@@ -83,7 +79,14 @@ $5 - Satsuma directory
 
 `reformat.sh in=file.fasta out=file_10kb.fasta minlength=10000`
 
-### Create bed files of X-scaffolds and autosomal scaffolds
+where file.fasta is your original RefGen and file_10kb.fasta is your RefGen after removing scaffolds <10 kb
+
+- To run reformat.sh you can copy the file to your working folder from BBmap toolsuit GitHub
+https://github.com/BioInfoTools/BBMap/blob/master/sh/reformat.sh
+
+
+
+### B-C. Create bed files of X-scaffolds and autosomal scaffolds
 - Extract regions mapping to X and Y from the satsuma output independently
 
 `grep chromosome_Y satsuma_summary.chained.out | awk '{print $4"\t"$5"\t"$6}' > Y.bed`
@@ -101,7 +104,11 @@ $5 - Satsuma directory
 `grep -v -f <(cat Y.bed X.bed | cut -f 1 | sort | uniq) reference.fasta.fai | awk '{print $1"\t1\t"$2}'  > Autosomes.bed`
 
 
-### Calculate depths of bam files
+### D. Map raw shotgun reads to the reference genome assembly
+See frequently asked questions
+
+
+### E.I. Calculate depths of bam files
 
 -  Randomly sample 1M sites 10x and calculate depth from said sites
 
