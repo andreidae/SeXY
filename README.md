@@ -95,7 +95,7 @@ https://github.com/BioInfoTools/BBMap/blob/master/sh/reformat.sh
 
 - Remove regions that overlapping regions from the X bed file (putatively pseudoautosomal regions)
 
-- Note: the terms chromosome_Y and chromosome_X will depend on the fasta file header of your reference sex-chromosome assembly.
+Note: the terms chromosome_Y and chromosome_X will depend on the fasta file header of your reference sex-chromosome assembly.
 
 `grep -v -f <(bedtools intersect -a X.bed -b Y.bed) X.bed > X_trim.bed`
 
