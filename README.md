@@ -168,10 +168,9 @@ The number of reads in the bam file can be checked with:
 ` samtools view -c .bam`
 
 
-
 ## Frequently asked questions
 
-1. How to download the reference genome assembly?
+**1. How to download the reference genome assembly?**
 
 
 You can download a genome from a genome assembly depository such as NCBI or DNAzoo. The steps for NCBI are:
@@ -187,7 +186,7 @@ E.g. Beluga.v3 assembly reference genome:
 `wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/288/925/GCF_002288925.2_ASM228892v3/GCF_002288925.2_ASM228892v3_genomic.fna.gz`
 
 
-2. How to obtain a reference sex-chromosome assembly?
+**2. How to obtain a reference sex-chromosome assembly?**
 
 This can either be done by downloading the sex chromosomes directly or by downloading a chromosome level assembly and extracting the sex chromosomes.
 To download the sex chromosomes directly, follow the same steps as to with the reference genome. In “FTP directory for RefSeq assembly” there is usually a folder called assembly_structure in which the individual chromosomes can be downloaded in fasta format `wget [fna.gz sex-chromosome link]`. 
@@ -199,11 +198,11 @@ To extract the sex chromosomes from RefGen one first needs to find the fasta hea
 `samtools faidx reference.fasta Xheader > Xchromosome.fasta`
 
 
-3. How to map raw reads to the reference genome assembly?
+**3. How to map raw reads to the reference genome assembly?**
 
-You can use developed pipeline such as PALEOMIX (https://paleomix.readthedocs.io/en/stable/). This pipeline is designed to process High Throughput Sequencing data. Was originally designed with ancient DNA data but can also be used for processing modern samples. 
+You can use a developed pipeline such as PALEOMIX (https://paleomix.readthedocs.io/en/stable/). This pipeline is designed to process High Throughput Sequencing data. Was originally designed with ancient DNA data but can also be used for processing modern samples. 
 
-4. How do I know that the mitochondrial genome is not included in the reference genome assembly?
+**4. How do I know that the mitochondrial genome is not included in the reference genome assembly?**
 
 Most reference genome assemblies exclude the mitochondrial genome. You should be able to see that information in the description of the assembly in e.g. NCBI. 
 If it is uncertain whether the mitochondrial is included or not, you can map your reference genome to the mitochondrial genome and remove those reads, or you can exclude all scaffolds <18 kb. E.g.
