@@ -195,6 +195,7 @@ E.g. Xchr from the cow:
 `wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/263/795/GCF_002263795.1_ARS-UCD1.2/GCF_002263795.1_ARS-UCD1.2_assembly_structure/Primary_Assembly/assembled_chromosomes/FASTA/chrX.fna.gz`
 
 To extract the sex chromosomes from RefGen one first needs to find the fasta header for the chromosomes, once that is available samtools faidx can be used. E.g. 
+
 `samtools faidx reference.fasta Xheader > Xchromosome.fasta`
 
 
@@ -206,4 +207,5 @@ You can use a developed pipeline such as PALEOMIX (https://paleomix.readthedocs.
 
 Most reference genome assemblies exclude the mitochondrial genome. You should be able to see that information in the description of the assembly in e.g. NCBI. 
 If it is uncertain whether the mitochondrial is included or not, you can map your reference genome to the mitochondrial genome and remove those reads, or you can exclude all scaffolds <18 kb. E.g.
+
 `reformat.sh in=RefGen.fasta out=RefGen_18kb.fasta minlength=18000`
