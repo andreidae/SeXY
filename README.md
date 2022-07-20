@@ -215,6 +215,8 @@ If it is uncertain whether the mitochondrial is included or not, you can map you
 Although we assessed the method based on XY sex chromosomes (as in mammals), the method can in theory be applied to any species with a heterogametic and a homogametic sex (e.g, birds, and some reptiles, fish, and insects), and in which the target and reference species share the same sex determination system. However, it will requiere additional evaluations.
 Here we show the results on an avian species (snow goose) that we evalueted.
 
+| First Header  | Second Header | Second Header |
+| ------------- | ------------- | ------------- |
 | **Species** | Anser caerulescens | Anser caerulescens | 
 | **Common name** | Snow goose | Snow goose |
 | **Expected sex** | M | F |
