@@ -220,11 +220,11 @@ Table 1: Results of the seXY pipeline in determining the sex of an avian species
 
 |   |  |  |
 | ------------- | ------------- | ------------- |
-| **Species** | Anser caerulescens | Anser caerulescens | 
+| **Species** | *Anser caerulescens* | *Anser caerulescens* | 
 | **Common name** | Snow goose | Snow goose |
 | **Expected sex** | M | F |
 | **RefZW** | Chicken | Chicken |
-| **RefGen** | Anser brachyrhynchus | Anser brachyrhynchus |
+| **RefGen** | *Anser brachyrhynchus* | *Anser brachyrhynchus* |
 | **RefGen N50 (bp)** | 4,974,386 | 4,974,386 |
 | **Mean autosome coverage** | 0.0773 | 0.0785 |
 | **Mean Z coverage** | 0.0761 | 0.0422 | 
