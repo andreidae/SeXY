@@ -211,7 +211,8 @@ If it is uncertain whether the mitochondrial is included or not, you can map you
 
 `reformat.sh in=RefGen.fasta out=RefGen_18kb.fasta minlength=18000`
 
-**4. Does SeXY work on other species than mammals?
+**5. Does SeXY work on other species besides mammals?**
+
 Although we assessed the method based on XY sex chromosomes (as in mammals), the method can in theory be applied to any species with a heterogametic and a homogametic sex (e.g, birds, and some reptiles, fish, and insects), and in which the target and reference species share the same sex determination system. However, it will requiere additional evaluations.
 Here we show the results on an avian species (snow goose) that we evalueted.
 
