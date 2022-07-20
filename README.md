@@ -210,3 +210,20 @@ Most reference genome assemblies exclude the mitochondrial genome. You should be
 If it is uncertain whether the mitochondrial is included or not, you can map your reference genome to the mitochondrial genome and remove those reads, or you can exclude all scaffolds <18 kb. E.g.
 
 `reformat.sh in=RefGen.fasta out=RefGen_18kb.fasta minlength=18000`
+
+**4. Does SeXY work on other species than mammals?
+Although we assessed the method based on XY sex chromosomes (as in mammals), the method can in theory be applied to any species with a heterogametic and a homogametic sex (e.g, birds, and some reptiles, fish, and insects), and in which the target and reference species share the same sex determination system. However, it will requiere additional evaluations.
+Here we show the results on an avian species (snow goose) that we evalueted.
+
+| **Species** | Anser caerulescens | Anser caerulescens | 
+| **Common name** | Snow goose | Snow goose |
+| **Expected sex** | M | F |
+| **RefZW** | Chicken | Chicken |
+| **RefGen** | Anser brachyrhynchus | Anser brachyrhynchus |
+| **RefGen N50 (bp)** | 4,974,386 | 4,974,386 |
+| **Mean autosome coverage** | 0.0773 | 0.0785 |
+| **Mean Z coverage** | 0.0761 | 0.0422 | 
+| **Mean Z:A ratio** | 0.98 | 0.54 | 
+| **Genetic sex** | M | F |
+
+
