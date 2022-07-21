@@ -232,3 +232,6 @@ Table 1: Results of the seXY pipeline in determining the sex of an avian species
 | **Genetic sex** | M | F |
 
 
+## Citing and references
+
+Cabrera, Andrea A.; Rey-Iglesia, Alba; Louis, Marie; Skovrind, Mikkel; Westbury, Michael V.; Lorenzen. Eline D. 2022. How low can you go: sex identification from low-quantity sequencing data despite lacking assembled sex chromosomes. *Ecology and Evolution.* 
