@@ -23,7 +23,7 @@ D. Map raw shotgun reads to the reference genome assembly.
 
 E. Calculate the mean coverage of ten million sites randomly sampled across the extracted X-linked scaffolds. 
 
-F. Calculate the mean coverage of ten million sites randomly sampled across the extracted autosomal scaffold.
+F. Calculate the mean coverage of ten million sites randomly sampled across the extracted autosomal scaffolds.
 
 G. Calculate the ratio of X-linked scaffold mean coverage to Autosomal scaffold mean coverage (X:A ratio).
 
