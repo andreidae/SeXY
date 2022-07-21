@@ -110,7 +110,7 @@ Note: the terms chromosome_Y and chromosome_X may vary and will depend on the fa
 Map your raw shotgun reads to RefGen. The RefGen includes both autosome- and sex- chromosome scaffolds. If you remove the short scaffolds <10 kb, use RefGen_10kb.fasta. The output from the mapping is a bam file. See frequently asked questions.
 
 
-### E.I. Calculate depths of bam files
+### E. Calculate depths of bam files
 
 -  Randomly sample 1M sites 10x and calculate depth from said sites
 
@@ -202,7 +202,7 @@ To extract the sex chromosomes from RefGen one first needs to find the fasta hea
 
 **3. How to map raw reads to the reference genome assembly?**
 
-You can use a developed pipeline such as PALEOMIX (https://paleomix.readthedocs.io/en/stable/). This pipeline is designed to process High Throughput Sequencing data. Was originally designed with ancient DNA data but can also be used for processing modern samples. 
+You can use a developed pipeline such as PALEOMIX (https://paleomix.readthedocs.io/en/stable/). This pipeline is designed to process High Throughput Sequencing data. It was originally designed with ancient DNA data but can also be used for processing modern samples. 
 
 **4. How do I know that the mitochondrial genome is not included in the reference genome assembly?**
 
@@ -213,10 +213,10 @@ If it is uncertain whether the mitochondrial is included or not, you can map you
 
 **5. Does SeXY work on other species besides mammals?**
 
-Although we assessed the method based on XY sex chromosomes (as in mammals), the method can in theory be applied to any species with a heterogametic and a homogametic sex (e.g, birds, and some reptiles, fish, and insects), and in which the target and reference species share the same sex determination system. However, it will requiere additional evaluations.
-Here we show the results on an avian species (snow goose) that we evalueted.
+Although we assessed the method based on XY sex chromosomes (as in mammals), the method can in theory be applied to any species with a heterogametic and a homogametic sex (e.g, birds, and some reptiles, fish, and insects), and in which the target and reference species share the same sex determination system. However, it may require additional evaluations.
+Here we show the results of using seXY on an avian species (snow goose) with ZW chromosomes.
 
-Table 1: Results of the seXY pipeline in determining the sex of an avian species
+Table 1: Results of the seXY pipeline in determining the sex of an avian species 
 
 |   |  |  |
 | ------------- | ------------- | ------------- |
