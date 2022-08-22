@@ -105,6 +105,11 @@ Note: the terms chromosome_Y and chromosome_X may vary and will depend on the fa
 
 `grep -v -f <(cat Y.bed X.bed | cut -f 1 | sort | uniq) RefGEN_10kb.fai | awk '{print $1"\t1\t"$2}'  > Autosomes.bed`
 
+Note: We noticed that sometimes Satsuma prints negative values - we are not sure why but you can fix that with `awk '{if ($2<1) print $1"\t"$2*-1"\t"$3 ; else print}' X.bed > X_corrected.bed`
+
+Note: Depending on the names of the scaffolds you may have troubles. 
+For example: the scaffold named NW_007907019.1_Ursus_maritimus_isolate_Baiyulong_unplaced_genomic_scaffold,_UrsMar_1.0_scaffold277,_whole_genome_shotgun_sequence will not be found in the fai file using grep or when using samtools depth. Instead you will need to trim the name to the NCBI accession code only. This can be done using `cut -d "_" -f 1,2 X_trim.bed | paste - <(cut -f 2,3 X_trim.bed) > X_trim_mod.bed`
+
 
 ### D. Map raw shotgun reads to the reference genome assembly
 Map your raw shotgun reads to RefGen. The RefGen includes both autosome- and sex- chromosome scaffolds. If you remove the short scaffolds <10 kb, use RefGen_10kb.fasta. The output from the mapping is a bam file. See frequently asked questions.
