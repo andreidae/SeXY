@@ -35,7 +35,7 @@ I. Calculate the mean and standard deviations of the X:A ratio.
 ## Pipeline steps
 
 ### Required software
-Satsuma synteny (http://satsuma.sourceforge.net/)
+Satsuma synteny (http://satsuma.sourceforge.net/ or from this github)
 
 BEDtools (https://bedtools.readthedocs.io/en/latest/)
 
